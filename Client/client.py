@@ -18,12 +18,17 @@ def sends():
 
 
 if __name__ == "__main__":
+    #Config File
+    file = 'config_client.ini'
+    config = ConfigParser()
+    config.read(file)
+
     #parametres
-    HEADER = 64
-    PORT = 5050
-    FORMAT = 'utf-8'
+    HEADER = config['CONFIG']['HEADER']
+    PORT = config['CONFIG']['PORT']
+    SERVER = config['CONFIG']['SERVER']
+    FORMAT = config['CONFIG']['FORMAT']
     DISCONNECT_MESSAGE = "!DISCONNECT"
-    SERVER = "192.168.0.204"
     ADDR = (SERVER, PORT)
 
     #connect 
