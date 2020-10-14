@@ -1,5 +1,6 @@
 # --*-- conding : utf8 --*-- 
 from configparser import ConfigParser
+import os
 import socket
 import threading
 import logging
@@ -34,9 +35,21 @@ def start():
 
 if __name__ == "__main__":
     #CONFIG FILE
-    file = 'config_server.ini'
+    path = '/'.join((os.path.abspath(__file__).replace('\\', '/')).split('/')[:-1])
     config = ConfigParser()
-    config.read(file)
+    config.read(os.path.join(path, 'config_server.ini'))
+    #parametros
+    HEADER = 80
+    PORT = int(config['CONFIG']['PORT'])
+    SERVER = '192.168.1.133'
+    ADDR = (SERVER, PORT)
+    FORMAT = 'utf-8'
+
+    #COMANDS
+    DISCONNECT_MESSAGE = config['COMMANDS']['DISCONNECT_MESSAGE']
+
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server.bind(ADDR)
 
     print("""
     
@@ -45,18 +58,6 @@ if __name__ == "__main__":
     
     """)
 
-    #parametros
-    HEADER = config['CONFIG']['HEADER']
-    PORT = config['CONFIG']['PORT']
-    SERVER = config['CONFIG']['SERVER']
-    ADDR = (SERVER, PORT)
-    FORMAT = config['CONFIG']['FORMAT']
 
-    #COMANDS
-    DISCONNECT_MESSAGE = config['COMMANDS']['DISCONNECT_MESSAGE']
-    
-
-    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server.bind(ADDR)
 
     start()
