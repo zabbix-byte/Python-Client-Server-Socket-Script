@@ -1,5 +1,5 @@
 # Python Client / Server Script
-🏍 En proceso de creacion .
+🏍 En proceso de creacion . info : zabbix@ztrunk.space
 
 ### Descripcion de funccionamiento 🚂
 Es un programa basico que hace funccion de cliente servidor .
