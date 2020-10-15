@@ -19,6 +19,9 @@ def send(msg):
 
 
 if __name__ == "__main__":
+    #Aqui se gritaran los recopiladores de datos 
+    subprocess.call("py clientsysteminfo.py", shell=False)
+
     #Config File
     path = '/'.join((os.path.abspath(__file__).replace('\\', '/')).split('/')[:-1])
     config = ConfigParser()
