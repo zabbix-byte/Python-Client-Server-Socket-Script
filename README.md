@@ -34,8 +34,8 @@ Falta hacer pruebas en WAN.
 
 ### Usos que se le pueden dar🚦🌌
 * Creacion de un sistema servidor cliente para un chat 
-* Creacion de malware que recopila datos de victimas
-* Creacion de aplicacion para transferir ficheros y ver exactamente de quien y de donde vienen
+* Creacion de malware que recopila datos de las victimas
+* Creacion de aplicacion para transferir ficheros y ver exactamente de quien y de donde provienen
 * etc etc etc etc
 
 ![](https://www.pngimg.com/uploads/madagascar_penguins/madagascar_penguins_PNG51.png)
