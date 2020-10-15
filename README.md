@@ -28,14 +28,15 @@ Es un programa basico que hace funccion de cliente servidor .
 * lib(configparser)
 * lib(threading)
 
-### Entorno de pruebas 🏖🪐
-Pruebas LAN.
-Falta hacer pruebas en WAN.
-
 ### Usos que se le pueden dar🚦🌌
 * Creacion de un sistema servidor cliente para un chat 
 * Creacion de malware que recopila datos de las victimas
 * Creacion de aplicacion para transferir ficheros y ver exactamente de quien y de donde provienen
 * etc etc etc etc
+
+### Entorno de pruebas 🏖🪐
+Pruebas LAN.
+Falta hacer pruebas en WAN.
+
 
 ![](https://www.pngimg.com/uploads/madagascar_penguins/madagascar_penguins_PNG51.png)
