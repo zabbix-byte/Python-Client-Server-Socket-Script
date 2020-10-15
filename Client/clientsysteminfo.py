@@ -1,4 +1,5 @@
 from configparser import ConfigParser
+import platform
 import configparser
 import os
 import sys
@@ -6,6 +7,10 @@ import subprocess
 import socket
 
 #EN ESTE SCRIPT SOLO SE AÑADIRAN FUNCCIONES PARA OBTENER INFORMACION DEL SYSTEMA
+
+def os_info():
+    os_info = platform.system() + " " + platform.release() + " " + os.name
+    return str(os_info)
 
 def ip_publica():
     get_ip = subprocess.call("curl ifconfig.me", shell=True)
@@ -19,8 +24,8 @@ if __name__ == "__main__":
     file = open(os.path.join(path, 'DATA/DATA.ini'), "w")
 
     config.add_section('system_info')
-    config.set('system_info', 'IP_PUB', '2')
-    
+    config.set('system_info', 'IP_PUB', '3')
+    config.set('system_info', 'os_info', os_info())
     config.write(file)
 
     file.close

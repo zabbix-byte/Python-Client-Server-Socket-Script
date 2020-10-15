@@ -37,11 +37,19 @@ if __name__ == "__main__":
     #connect 
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client.connect(ADDR)
-
+ 
     config.read(os.path.join(path, 'DATA/DATA.ini'))
+    send(f"""
+                                zabbix
+     ✈ INFORMACION DEL SISTEMA CONECTADO : 
 
-    send(str(config['system_info']['IP_PUB']))
-    send("info_2fsadfsdfasdfgsdfghsdfhjfgjtfhrt")
-    send("info_3")
+            Sistema operativo :  {str(config['system_info']['os_info'])}
+            IP publica        :  {str(config['system_info']['IP_PUB'])}
+            Puertos abiertos  :
+            Usuarios sistema  :
+            Ubificacion       :
+
+     """)
+
     send(DISCONNECT_MESSAGE)
 
