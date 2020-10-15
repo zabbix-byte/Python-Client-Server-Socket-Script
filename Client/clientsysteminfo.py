@@ -17,17 +17,21 @@ def users_info():
     for i in reversed(range(homedir_lean)):
         if homedir[i] == "\\" or homedir[i] == "/":
             return homedir[i + 1 : -1 ] + homedir[-1]
+    return "error"
 
-    return "no ha ido"
 
+##OBTENER SISTEMA OPERATIVO DEL CLIENTE
 def os_info():
     os_info = platform.system() + " " + platform.release() + " " + os.name
     return str(os_info)
 
+
+##OBTENER IP PUBLICA DEL CLIENTE
 def ip_publica():
-    get_ip = subprocess.call("curl ifconfig.me", shell=True)
+    get_ip = subprocess.check_output("curl http://ip.42.pl/raw", shell=True)
     str_get_ip = str(get_ip)
-    return str_get_ip
+    cont_get_ip = str_get_ip[2:15]
+    return cont_get_ip
 
 if __name__ == "__main__":
     #CREACION DE FICHER .INI
@@ -36,7 +40,7 @@ if __name__ == "__main__":
     file = open(os.path.join(path, 'DATA/DATA.ini'), "w")
 
     config.add_section('system_info')
-    config.set('system_info', 'IP_PUB', '3')
+    config.set('system_info', 'IP_PUB', ip_publica())
     config.set('system_info', 'os_info', os_info())
     config.set('system_info', 'os_user', users_info())
     config.write(file)
