@@ -14,7 +14,7 @@ Es un programa basico que hace funccion de cliente servidor .
 * El cliente que almacene los datos recopilados ✔
 * Ficheros de configuracion .ini ✔
 
-## Datos que recopila del cliente (✔-Datos que pasa , ❌-Datos que de momento no pasa de momento ) 🐱‍🏍🐱‍👤
+### Datos que recopila del cliente (✔-Datos que pasa , ❌-Datos que de momento no pasa de momento ) 🐱‍🏍🐱‍👤
 * Ubificacion ❌
 * IP publica ✔
 * Puertos abiertos ❌
