@@ -23,6 +23,3 @@ Es un programa basico que hace funccion de cliente servidor .
 
 
 ![](https://www.pngimg.com/uploads/madagascar_penguins/madagascar_penguins_PNG51.png)
-
-
-![](https://www.pngimg.com/uploads/madagascar_penguins/madagascar_penguins_PNG51.png)
