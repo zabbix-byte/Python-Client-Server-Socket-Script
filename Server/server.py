@@ -20,7 +20,8 @@ def handle_client(conn, addr):
 
             print(f"[{addr}] {msg}")
             conn.send("Recivido".encode(FORMAT))
-
+    
+    
     conn.close()
 
 #iniciador de conecxion con los clientes
@@ -32,6 +33,7 @@ def start():
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
         print(f"[Conexiones activas] {threading.activeCount() - 1}")
+
 
 
 
