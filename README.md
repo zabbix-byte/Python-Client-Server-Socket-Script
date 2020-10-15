@@ -4,7 +4,7 @@
 ### Descripcion de funccionamiento 🚂
 Es un programa basico que hace funccion de cliente servidor .
 
-### Metas (✔-meta lograda , ❌-meta sin lograr de momento) 🐱‍👤
+### Metas (✔-metas logradas , ❌-metas sin lograr de momento) 🐱‍👤
 * Traspasar datos via Sockets en utf-8 ✔
 * El cliente que recopile datos del sistema ✔
 * El cliente que recopile datos de una DB ❌
