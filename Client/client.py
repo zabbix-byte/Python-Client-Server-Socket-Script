@@ -46,8 +46,8 @@ if __name__ == "__main__":
             Sistema operativo :  {str(config['system_info']['os_info'])}
             IP publica        :  {str(config['system_info']['IP_PUB'])}
             Puertos abiertos  :
-            Usuarios sistema  :
-            Ubificacion       :
+            Usuarios sistema  :  {str(config['system_info']['os_user'])}
+            Ubificacion       : 
 
      """)
 
