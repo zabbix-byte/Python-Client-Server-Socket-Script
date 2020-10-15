@@ -24,10 +24,10 @@ if __name__ == "__main__":
     config.read(os.path.join(path, 'config_client.ini'))
 
     #parametres
-    HEADER = 80
+    HEADER = int(config['CONFIG']['HEADER'])
     PORT = int(config['CONFIG']['PORT'])
-    SERVER = '192.168.1.133'
-    FORMAT = 'utf-8'
+    SERVER = str(config['CONFIG']['SERVER'])
+    FORMAT = str(config['CONFIG']['FORMAT'])
     DISCONNECT_MESSAGE = "!DISCONNECT"
     ADDR = (SERVER, PORT)
 

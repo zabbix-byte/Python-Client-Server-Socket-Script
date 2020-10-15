@@ -39,11 +39,11 @@ if __name__ == "__main__":
     config = ConfigParser()
     config.read(os.path.join(path, 'config_server.ini'))
     #parametros
-    HEADER = 80
+    HEADER = int(config['CONFIG']['HEADER'])
     PORT = int(config['CONFIG']['PORT'])
-    SERVER = '192.168.1.133'
+    SERVER = str(config['CONFIG']['SERVER'])
     ADDR = (SERVER, PORT)
-    FORMAT = 'utf-8'
+    FORMAT = str(config['CONFIG']['FORMAT'])
 
     #COMANDS
     DISCONNECT_MESSAGE = config['COMMANDS']['DISCONNECT_MESSAGE']
