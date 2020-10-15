@@ -7,29 +7,31 @@ import logging
 
 #hadler
 def handle_client(conn, addr):
-    print(f"[NUEVA CONEXION] {addr} .")
+    print(f"[Nueva Conexion] {addr} .")
 
     connected = True
-
     while connected:
         msg_length = conn.recv(HEADER).decode(FORMAT)
-        msg_length = int(msg_length)
-        msg = conn.recv(msg_length).decode(FORMAT)
-        if msg == DISCONNECT_MESSAGE:
-            connected = False
-        print(f"[{addr}] {msg}")
+        if msg_length:
+            msg_length = int(msg_length)
+            msg = conn.recv(msg_length).decode(FORMAT)
+            if msg == DISCONNECT_MESSAGE:
+                connected = False
+
+            print(f"[{addr}] {msg}")
+            conn.send("Recivido".encode(FORMAT))
 
     conn.close()
 
 #iniciador de conecxion con los clientes
 def start():
     server.listen()
-    print("[ESCUCHANDO A CLIENTES]")
+    print(f"[Escuchando] {SERVER}")
     while True:
         conn, addr = server.accept()
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
-        print(f"[CONEXIONES ACTIVAS] {threading.activeCount() -1}")
+        print(f"[Conexiones activas] {threading.activeCount() - 1}")
 
 
 

@@ -5,6 +5,7 @@ import threading
 import logging
 import os
 
+
 #send funcciton
 def send(msg):
     message = msg.encode(FORMAT)
@@ -34,8 +35,8 @@ if __name__ == "__main__":
     #connect 
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client.connect(ADDR)
-    send("")
-    send("Ya estoy aqui")
+    send("info_1")
+    send("info_2")
+    send("info_3")
     send(DISCONNECT_MESSAGE)
-
 
