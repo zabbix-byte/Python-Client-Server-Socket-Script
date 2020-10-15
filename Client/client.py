@@ -31,12 +31,14 @@ if __name__ == "__main__":
     FORMAT = str(config['CONFIG']['FORMAT'])
     DISCONNECT_MESSAGE = "!DISCONNECT"
     ADDR = (SERVER, PORT)
-
     #connect 
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     client.connect(ADDR)
-    send("info_1")
-    send("info_2")
+
+    config.read(os.path.join(path, 'DATA/DATA.ini'))
+
+    send(str(config['system_info']['IP_PUB']))
+    send("info_2fsadfsdfasdfgsdfghsdfhjfgjtfhrt")
     send("info_3")
     send(DISCONNECT_MESSAGE)
 
