@@ -5,7 +5,7 @@ import threading
 import logging
 import os
 
-
+#hola
 #send funcciton
 def send(msg):
     message = msg.encode(FORMAT)
